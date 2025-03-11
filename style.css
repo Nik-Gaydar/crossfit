@@ -264,6 +264,10 @@ body {
   background-color: var(--color-dark);
 }
 
+a {
+  color: var(--color-light);
+}
+
 .container {
   max-width: calc(--container-width) + (--container-padding-x) * 2;
   margin-inline: auto;
@@ -272,5 +276,22 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
+  text-transform: uppercase;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.header-menu-list {
+  display: flex;
+  column-gap: 60px;
+}
+
+.header-menu-link {
+  text-decoration: none;
   text-transform: uppercase;
 }
