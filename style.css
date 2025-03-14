@@ -339,10 +339,41 @@ h6 {
   column-gap: 30px;
 }
 
-.header-brger-button {
+.header-burger-button {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 4px;
   width: 40px;
   height: 40px;
+  padding-left: 8px;
+  color: var(--color-light);
   background-color: transparent;
   border: var(--border);
   border-radius: var(--border-radius);
+}
+
+.header-burger-button:hover {
+  color: var(--color-light-gray);
+  border-color: currentColor;
+}
+
+.header-burger-button-line {
+  width: 6px;
+  height: 1px;
+  background-color: currentColor;
+}
+
+.header-burger-button-line:hover {
+  color: var(--color-light-gray);
+}
+
+.header-burger-button-line::after {
+  content: "";
+  display: block;
+  flex-direction: column;
+  width: 6px;
+  height: 1px;
+  margin-left: 16px;
+  background-color: currentColor;
 }
