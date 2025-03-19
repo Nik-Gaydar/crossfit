@@ -468,6 +468,31 @@ h6 {
   border-color: var(--color-light-gray);
 }
 
+/* motivation section */
+
+.motivation-item:nth-child(even) {
+  background-color: var(--color-dark-alternate);
+}
+
+.motivation-item:nth-child(even) .mativation-card {
+  flex-direction: row-reverse;
+}
+
+.mativation-card {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  column-gap: clamp(30px, 10.4vw, 200px);
+}
+
+.motivation-card-image {
+  margin-block: -60px;
+}
+
+.motivation-card-body {
+  padding-left: 35px;
+}
+
 @media (max-width: 1024px) {
   .header {
     flex-wrap: wrap;
