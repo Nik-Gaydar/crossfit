@@ -430,8 +430,24 @@ h6 {
   outline: none;
 }
 
-.input::placeholder {
+.input::placeholder,
+select.input:invalid {
   color: var(--color-light-gray);
+}
+
+option {
+  color: var(--color-light);
+}
+
+/* Убирает стрелки в числовом поле ввода */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
 }
 
 .header {
@@ -819,6 +835,50 @@ margin-bottom: 38px;
 
 .family-image {
   scroll-snap-align: start; /*Привязка при скроле будет к началу элемента слайда*/
+}
+
+/* Section calculate */
+
+.calculate {
+  padding-block: 146px;
+  background-color: var(--color-dark-alternate);
+}
+
+.calculate-inner {
+  display: flex;
+  align-items: center;
+  column-gap: 36px;
+}
+
+.calculate-form-body {
+  max-width: 627px;
+  flex-grow: 1;
+}
+
+.calculate-title:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.calculate-description {
+  max-width: 385px;
+}
+
+.calculate-description:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.calculate-form-body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 30px;
+}
+
+.calculate-form-body:not(:last-child) {
+  margin-bottom: 26px;
+}
+
+.calculate-input.wide {
+  grid-column: -1/ 1;
 }
 
 @media (max-width: 1919px) {
