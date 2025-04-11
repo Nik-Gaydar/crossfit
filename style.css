@@ -1021,6 +1021,30 @@ margin-bottom: 38px;
   .family-image {
     height: 360px;
   }
+
+  .calculate {
+    padding-block: 100px
+  }
+
+  .calculate-inner {
+    column-gap: 20px;
+  }
+
+  .calculate-form-body {
+    grid-template-columns: 1fr;
+  }
+
+  .calculate-button {
+    width: 100%;
+  }
+
+  .calculate-table :is(th, td) {
+    padding-block: 10px;
+  }
+
+  .calculate-table tfoot td {
+    padding-top: 10px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1115,5 +1139,18 @@ margin-bottom: 38px;
 
   .family-image {
     height: 180px;
+  }
+
+  .calculate {
+    padding-block: 60px;
+  }
+
+  .calculate-inner {
+    flex-direction: column;
+    gap: 30px
+  }
+
+  .calculate-table-wrapper::before {
+    display: none;
   }
 }
