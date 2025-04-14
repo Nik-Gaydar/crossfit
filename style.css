@@ -972,15 +972,19 @@ margin-bottom: 38px;
 .footer-header,
 .footer-body {
   display: grid;
+  column-gap: 62px;
 }
 
 .footer-header {
   grid-template-columns: var(--footerLogoWidth) auto;
-  column-gap: 62px;
 }
 
 .footer-header:not(:last-child) {
   margin-bottom: 60px;
+}
+
+.footer-logo-image {
+  height: auto;
 }
 
 .footer-description {
@@ -1021,25 +1025,46 @@ margin-bottom: 38px;
   position: relative;
 }
 
+.footer-subscribe:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.footer-subscribe-input {
+  padding-right: 70px;
+}
+
 .footer-subscribe-button {
-  width: 50px; /* Фиксированная ширина */
-  height: 50px; /* Фиксированная высота */
   position: absolute;
-  top: 50%;
+  top: 0;
   right: 0;
-  transform: translateY(-50%); /*Центрирование по вертикали*/
+  height: 100%;
+  aspect-ratio: 1;
   background: url(./icons/arrow-top-right.svg) center / 70% no-repeat;
   border: var(--border);
-  border-radius: 50%; /* Теперь будет идеальный круг */
+  border-radius: 50%;
 }
 
 .footer-subscribe-button:hover {
   background-color: var(--color-light-gray);
 }
 
+.footer-soc1als-list {
+  display: flex;
+  column-gap: 18px;
+}
+
+.footer-soc1als-link {
+  display: flex;
+  width: 23px;
+}
+
 .footer-extra {
   padding-block: 15px;
   background-color: var(--color-dark-alternate);
+}
+
+.footer-copyright {
+  font-size: 14px;
 }
 
 @media (max-width: 1919px) {
